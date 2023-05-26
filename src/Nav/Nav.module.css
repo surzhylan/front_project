@@ -1,0 +1,41 @@
+.Nav {
+    position: fixed;
+    left: 40px;
+    top: 30px;
+}
+
+.ul {
+    background-color: black;
+    width: 115px;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 24px;
+}
+
+.ul li:first-child {
+    font-family: 'Baloo Bhai';
+font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 102px;
+margin: 0;
+/* identical to box height */
+
+
+color: #F1D5BB;
+}
+
+.ul li {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.ul li svg {
+    cursor: pointer;
+}
+
+.ul li:nth-child(3){
+    background: #F1D5BB;
+}

@@ -1,0 +1,68 @@
+.WelcomePage >  img {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+.WelcomePage {
+    display: flex;
+    justify-content: center;
+}
+.h1 {
+    font-family: 'Mulish';
+font-style: normal;
+font-weight: 400;
+font-size: 60px;
+line-height: 75px;
+
+color: #FFFFFF;
+}
+
+.content {
+    width: 830px;
+    margin-top: 125px;
+}
+
+.buttons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.content p {
+    font-family: 'Mulish';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 31px;
+text-align: center;
+
+color: #FFFFFF;
+
+}
+
+.buttons button {
+    width: 200px;
+    height: 70px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 38px;
+    /* identical to box height */
+    cursor: pointer;
+    transition: 1s;
+    border: 1px solid white;
+    color: #000000;
+
+}
+
+.buttons button:hover {
+    transform: scale(1.1);
+}
+
