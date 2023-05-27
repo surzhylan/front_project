@@ -48,7 +48,7 @@ function Reviews(props) {
     <div className={r.Reviews}>
       <Nav />
       <div className="content">
-        <p className="title">Отзывы</p>
+        <p className="title">Reviews</p>
         <div className="hr"></div>
         <textarea
           cols="50"

@@ -10,46 +10,60 @@
 .WelcomePage {
     display: flex;
     justify-content: center;
+    /*background-color: rgba(230,224,224,255);*/
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    gap: 50px;
 }
 .h1 {
-    font-family: 'Mulish';
+    font-family: 'Telegraf Medium';
 font-style: normal;
-font-weight: 400;
-font-size: 60px;
+font-weight: 600;
+font-size: 65px;
 line-height: 75px;
 
-color: #FFFFFF;
+color: black;
+
 }
 
 .content {
-    width: 830px;
+    /*text-align: center;*/
+    width: 650px;
     margin-top: 125px;
+    position: absolute;
+    left: 5%;
+    top: 10%;
 }
 
 .buttons {
     display: flex;
+    margin-top: 50px;
     gap: 30px;
     justify-content: center;
 }
 
 .content p {
-    font-family: 'Mulish';
+    font-family: 'Telegraf Light';
 font-style: normal;
-font-weight: 400;
-font-size: 25px;
+font-weight: 500;
+font-size: 24px;
 line-height: 31px;
 text-align: center;
 
-color: #FFFFFF;
+color: black;
 
 }
 
 .buttons button {
     width: 200px;
-    height: 70px;
-    background: #FFFFFF;
-    border-radius: 2px;
-    font-family: 'Mulish';
+    height: 45px;
+    background: #d21b28;
+    border-radius: 25px;
+    font-family: 'Telegraf Light';
     font-style: normal;
     font-weight: 300;
     font-size: 25px;
@@ -57,8 +71,8 @@ color: #FFFFFF;
     /* identical to box height */
     cursor: pointer;
     transition: 1s;
-    border: 1px solid white;
-    color: #000000;
+    border: 1px solid #d21b28;
+    color: #fff;
 
 }
 
@@ -66,3 +80,34 @@ color: #FFFFFF;
     transform: scale(1.1);
 }
 
+.imageContent{
+    margin-top: 5%;
+}
+
+.imageContent img{
+    width: 600px;
+}
+
+.leafImg img{
+    width: 100px;
+    position: fixed;
+    top: 55%;
+    z-index: -1;
+    left: 54%;
+}
+
+.leafImg2 img{
+    width: 100px;
+    position: fixed;
+    top: 15%;
+    z-index: -1;
+    left: 59%;
+}
+
+.tomatoImg img{
+    width: 100px;
+    position: fixed;
+    top: 26%;
+    z-index: -1;
+    left: 88%;
+}

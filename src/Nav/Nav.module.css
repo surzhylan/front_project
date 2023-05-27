@@ -5,7 +5,7 @@
 }
 
 .ul {
-    background-color: black;
+    background-color: #bc1823;
     width: 115px;
     list-style-type: none;
     padding: 0;
@@ -20,9 +20,9 @@ font-size: 64px;
 line-height: 102px;
 margin: 0;
 /* identical to box height */
+color: white;
 
-
-color: #F1D5BB;
+/*color: #F1D5BB;*/
 }
 
 .ul li {
@@ -37,5 +37,6 @@ color: #F1D5BB;
 }
 
 .ul li:nth-child(3){
-    background: #F1D5BB;
+    background: white;
+    /*background: #F1D5BB;*/
 }

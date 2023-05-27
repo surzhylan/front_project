@@ -19,7 +19,7 @@ function MenuDescription(props) {
           <div key={id}>
             <img src={props.menu[id].strCategoryThumb} alt="img" />
             <p>
-              <span>Описание:</span> <br />
+              <span>Description:</span> <br />
               {props.menu[id].strCategoryDescription}
             </p>
           </div>

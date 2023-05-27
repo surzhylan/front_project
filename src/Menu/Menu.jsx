@@ -22,9 +22,10 @@ function Menu(props) {
     <div className={m.Menu}>
       <Nav />
       <div className="content">
-        <p className="title">Menu</p>
-        <div className="hr"></div>
-        <div>
+        <p className={m.title}>What We Offer</p>
+        <p className={m.title2}>Curious? Here are our most popular menu items.</p>
+        {/*<div className="hr"></div>*/}
+        <div className={m.search}>
           <div className={m.form}>
             <input
               className={m.searchInput}

@@ -20,10 +20,17 @@ color: #000000;
 .hr {
   width: 306px;
   height: 5px;
-  background: #F1D5BB;
-  border: 1px solid #F1D5BB;
+  background: #bc1823;
+  border: 1px solid #bc1823;
+
+  /*background: #F1D5BB;
+  border: 1px solid #F1D5BB;*/
 }
 
 .disable {
   display: none !important;
+}
+
+.App{
+  background-color: #ecebeb;
 }
