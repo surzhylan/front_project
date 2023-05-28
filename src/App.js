@@ -1,4 +1,4 @@
-
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import './App.css';
 import WelcomePage from './WelcomePage/WelcomePage';
@@ -14,24 +14,28 @@ import ErrorBoundary from "./ErrorBoundary";
 
 
 function App() {
+  const clonedWelcomePage = React.cloneElement(<WelcomePage />, {
+    name: "Our"
+  });
 
+  let contextWord = "Hi man i am context";
  
   return (
     <BrowserRouter>
-      {/* <Context.Provider value={{ menuId, setMenuId }}> */}
+      <Context.Provider value={contextWord}>
         <div className="App">
           <ErrorBoundary>
 
           
             <Routes>
-              <Route path="/" element={<WelcomePage/>} />
+              <Route path="/" element={clonedWelcomePage} />
               <Route path="/menu" element={<MenuContainer/>} />       
               <Route path='/menuDescription/:id' element={<MenuDescriptionContainer/>} />
               <Route path="/reviews" element={<ReviewsContainer/>} />                    
             </Routes>
           </ErrorBoundary>
         </div>
-      {/* </Context.Provider> */}
+      </Context.Provider>
     </BrowserRouter>
   );
   

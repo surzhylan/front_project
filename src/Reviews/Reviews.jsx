@@ -1,11 +1,28 @@
 import Nav from "../Nav/Nav";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Context } from "../context";
 import r from "./Reviews.module.css";
 
 function Reviews(props) {
   const [editMode, setEditMode] = useState({});
   let newReviewElement = React.createRef();
+
+  const prevPropsRef = useRef(props);
+  useEffect(() => {
+    console.log("Component Reviews DidMount");
+
+    return () => {
+      console.log("Component  Reviews unmounted");
+    };
+  });
+
+  useEffect(() => {
+    if (prevPropsRef.current.reviewsPage !== props.reviewsPage) {
+      console.log("Компонент Reviews updated");
+    }
+
+    prevPropsRef.current = props;
+  });
 
   let addReview = () => {
     props.addReview();
@@ -55,6 +72,7 @@ function Reviews(props) {
           rows="5"
           className={r.textarea}
           ref={newReviewElement}
+          value={props.reviewsPage.newReviewText}
           onChange={onReviewChange}
           onKeyUp={(e) => handleKeyUp(e)}
         ></textarea>
@@ -87,6 +105,7 @@ function Reviews(props) {
                   <input
                     ref={newMessageElement}
                     type="text"
+                    value={props.reviewsPage.newMessageText}
                     onChange={onTextChange}
                     onKeyUp={(e) => handleKeyUpForEdit(e, review.id)}
                   />

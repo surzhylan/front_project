@@ -3,10 +3,29 @@ import Nav from "../Nav/Nav";
 import { Context } from "../context";
 import m from "./Menu.module.css";
 
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useRef } from "react";
 
 function Menu(props) {
   const [value, setValue] = useState("");
+
+  const contextValue = useContext(Context);
+  console.log(contextValue);
+  const prevPropsRef = useRef(props);
+  useEffect(() => {
+    console.log("Component  Menu DidMount");
+
+    return () => {
+      console.log("Component Menu unmounted");
+    };
+  });
+
+  useEffect(() => {
+    if (prevPropsRef.current.menu !== props.menu) {
+      console.log("Компонент Menu обновлен");
+    }
+
+    prevPropsRef.current = props;
+  });
 
   function changeTextInSearch(value) {
     setValue(value);

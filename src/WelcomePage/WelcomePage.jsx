@@ -1,11 +1,11 @@
 import w from "./WelcomePage.module.css";
 import { NavLink } from "react-router-dom";
-function WelcomePage() {
+function WelcomePage(props) {
   return (
     <div className={w.WelcomePage}>
       <img src="./img/Home.png" alt="img" />
       <div className={w.content}>
-        <h1 className={w.h1}>Welcome to Our Restaurant</h1>
+        <h1 className={w.h1}>Welcome to {props.name} Restaurant</h1>
         <p>
           People eat with their eyes and restaurant creates an easy way for <br />
           customers to order when they can see beautiful photos of your food
